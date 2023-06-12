@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Blog Main Page</title>
+</head>
+
+<body>
+    <h1>
+        Blog Woohoo!
+    </h1>
+    <header>
+        This is a blog that follows my progression as a self-taught front-end web developer!
+    </header>
+    <p>
+    <div id="post-title">
+        First Blog!
+        <div id="date">
+            9 June 2023
+        </div>
+    </div>
+    </p>
+    <container id="text">
+        <p>
+            Everywhere you see “div” or “span” is a container tag. Where you see “class”, the HTML is kind of giving a
+            name to that container so we can reference it elsewhere, like in CSS. Tags can have attributes of “id” or
+            “class” for naming. The “id” is supposed to be unique per page, while a “class” can be shared.
+
+            What we want to do is to focus on the div tags with a class of “one-member”, like on line 2. These then
+            contain two more divs with classes “one-member-name” and “one-member-role”, like on lines 3 and 4. Since
+            they are classes, we can create a CSS selector using a prefix of a period. (IDs are referenced with a prefix
+            of the pound sign or hash, “#”.)
+        </p>
+    </container>
+    <container id="more-blogs">
+        <h3>
+            Check out more of my blogs!
+        </h3>
+        <div id="first">
+            Recipes/Food
+        </div>
+        <div id="second">
+            Lifestyle
+        </div>
+        <div id="third">
+            Rando Thoughts
+        </div>
+    </container>
+</body>
+
+</html>
