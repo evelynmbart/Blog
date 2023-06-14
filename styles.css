@@ -2,6 +2,8 @@ h1 {
     color: mediumpurple;
     display: flex;
     justify-content: center;
+    text-align: center;
+    align-items: center;
     font-family: moirai one;
     font-size: 55px;
 }
