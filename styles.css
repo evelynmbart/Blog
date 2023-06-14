@@ -1,3 +1,7 @@
+html {
+    background-color: powderblue;
+}
+
 h1 {
     color: mediumpurple;
     display: flex;
@@ -103,7 +107,7 @@ a:hover {
     color: teal;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 300px) {
     body {
         margin: 10px;
     }
@@ -112,4 +116,13 @@ a:hover {
         margin: 5px;
         visibility: hidden;
     }
+}
+
+#circle {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    display: absolute;
+    left: 100%;
+    top: 0;
 }
