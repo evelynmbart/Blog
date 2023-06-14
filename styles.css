@@ -3,6 +3,7 @@ h1 {
     display: flex;
     justify-content: center;
     font-family: moirai one;
+    font-size: 55px;
 }
 
 body {
@@ -22,7 +23,7 @@ header {
     font-size: 25px;
 }
 
-#post-title {
+.post-title {
     border-bottom: 2px solid black;
     display: flex;
     justify-content: space-between;
@@ -32,7 +33,7 @@ header {
     margin-top: 30px;
 }
 
-#date {
+.date {
     border-bottom: 0;
     padding-right: 10px;
 }
@@ -114,6 +115,10 @@ a:hover {
 
     #more-blogs {
         margin: 5px;
-        visibility: hidden;
+        display: none;
+    }
+
+    #text {
+        max-width: 100%;
     }
 }
