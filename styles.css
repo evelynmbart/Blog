@@ -27,14 +27,13 @@ header {
     display: flex;
     justify-content: space-between;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 19px;
+    font-size: 21px;
+    color: rgb(244, 132, 34);
 }
 
 #date {
     border-bottom: 0;
     padding-right: 10px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 19px;
 }
 
 #text {
