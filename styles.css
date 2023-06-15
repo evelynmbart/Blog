@@ -31,6 +31,7 @@ header {
     justify-content: space-between;
     font-family: dosis;
     font-size: 21px;
+    font-weight: bold;
     color: rgb(244, 132, 34);
     margin-top: 30px;
 }
