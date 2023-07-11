@@ -59,6 +59,7 @@ header {
     max-width: 20%;
     padding-left: 5px;
     font-family: manrope;
+    gap: 10px;
 }
 
 h3 {
