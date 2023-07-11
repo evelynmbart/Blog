@@ -185,13 +185,43 @@
                 Rando Thoughts
             </a>
         </div>
-        <button>Let's play!</button>
+        <button type="button" class="hotOrCold" onClick="game()">Let's play!</button>
     </container>
 
 
 
     <script>
 
+        correctNumber = 3
+        coolRange = 30
+        warmRange = 20
+        hotRange = 10
+        superHotRange = 5
+        boilingRange = 1
+        //create user input
+        function game() {
+            correctNumber = 3
+            alert("Let's play a game! Classic Hot and Cold. You guess a number and the closer you get I'll tell you how hot or cold you are to the correct number. Let's begin!");
+            userGuess = prompt("Guess any number between 0 and 100");
+            while (userGuess !== correctNumber && userGuess !== null) {
+                userGuess = Number(userGuess);
+                if (userGuess === correctNumber) {
+                    alert("You are CORRECT!");
+                } else if (userGuess >= correctNumber - boilingRange && userGuess <= correctNumber + boilingRange) {
+                    userGuess = prompt("You are BOILING! Guess again.")
+                } else if (userGuess >= correctNumber - superHotRange && userGuess <= correctNumber + superHotRange) {
+                    userGuess = prompt("You are SUPER HOT! Guess again.");
+                } else if (userGuess >= correctNumber - hotRange && userGuess <= correctNumber + hotRange) {
+                    userGuess = prompt("You are HOT! Guess again.");
+                } else if (userGuess >= correctNumber - warmRange && userGuess <= correctNumber + warmRange) {
+                    userGuess = prompt("You are WARM! Guess again.");
+                } else if (userGuess >= correctNumber - coolRange && userGuess <= correctNumber + coolRange) {
+                    userGuess = prompt("You are COOL! Guess again.");
+                } else {
+                    userGuess = prompt("You are COLD! Guess again.");
+                }
+            }
+        }
     </script>
 </body>
 
