@@ -191,38 +191,40 @@
 
 
     <script>
-
-        let correctNumber = 3
-        let numberOfTries = 6
-        let coolRange = 30
-        let warmRange = 20
-        let hotRange = 10
-        let superHotRange = 5
-        let boilingRange = 1
-        //create user input
         function game() {
-            correctNumber = 3
-            alert("Let's play a game! Classic Hot and Cold. You guess a number and the closer you get I'll tell you how hot or cold you are to the correct number. You've only got six guesses, so make them count. Let's begin!");
-            userGuess = prompt("Guess any number between 0 and 100");
-            while (userGuess !== correctNumber && userGuess !== null && numberOfTries >= 2) {
+            let numberOfTries = 6
+            let correctNumber = Math.floor(Math.random() * 100);
+            let coolRange = 30
+            let warmRange = 20
+            let hotRange = 10
+            let superHotRange = 5
+            let boilingRange = 1
+            alert("Let's play a game! Classic Hot and Cold. You guess a number between 0-100 and the closer you get I'll tell you how hot or cold you are to the correct number. You've only got six guesses, so make them count. Let's begin!");
+            userGuess = prompt(`Guess any number between 0 and 100. You have ${numberOfTries} guesses.`);
+            numberOfTries -= 1;
+            while (Number(userGuess) !== correctNumber && userGuess !== null && numberOfTries > 0) {
                 userGuess = Number(userGuess);
                 if (userGuess === correctNumber) {
                     alert("You are CORRECT!");
                 } else if (userGuess >= correctNumber - boilingRange && userGuess <= correctNumber + boilingRange) {
-                    userGuess = prompt("You are BOILING! Guess again.")
+                    userGuess = prompt(`You are BOILING! Guess again. You have ${numberOfTries} guesses left.`)
                 } else if (userGuess >= correctNumber - superHotRange && userGuess <= correctNumber + superHotRange) {
-                    userGuess = prompt("You are SUPER HOT! Guess again.");
+                    userGuess = prompt(`You are SUPER HOT! Guess again. You have ${numberOfTries} guesses left.`);
                 } else if (userGuess >= correctNumber - hotRange && userGuess <= correctNumber + hotRange) {
-                    userGuess = prompt("You are HOT! Guess again.");
+                    userGuess = prompt(`You are HOT! Guess again. You have ${numberOfTries} guesses left.`);
                 } else if (userGuess >= correctNumber - warmRange && userGuess <= correctNumber + warmRange) {
-                    userGuess = prompt("You are WARM! Guess again.");
+                    userGuess = prompt(`You are WARM! Guess again. You have ${numberOfTries} guesses left.`);
                 } else if (userGuess >= correctNumber - coolRange && userGuess <= correctNumber + coolRange) {
-                    userGuess = prompt("You are COOL! Guess again.");
+                    userGuess = prompt(`You are COOL! Guess again. You have ${numberOfTries} guesses left.`);
                 } else {
-                    userGuess = prompt("You are COLD! Guess again.");
+                    userGuess = prompt(`You are COLD! Guess again. You have ${numberOfTries} guesses left.`);
                 }
                 numberOfTries--;
             }
+
+            if (Number(userGuess) === correctNumber) return alert("Winner!");
+            if (userGuess === null) return alert("Quitter.");
+            alert(`No more tries, Loser. Correct answer was ${correctNumber}.`);
         }
     </script>
 </body>
